@@ -1,0 +1,25 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int i=1, arr[10], v;
+	clrscr();
+	cout<<"Enter decimal: ";
+	cin>>v;
+	cout<<"Binary of "<<v<<" = ";
+
+
+	while(v>0)
+	{
+		arr[i] = v%2;
+		i++;
+		v = v/2;
+	}
+	i--;
+	while(i>0){
+		cout<<arr[i];
+		i--;
+	}
+	getch();
+}

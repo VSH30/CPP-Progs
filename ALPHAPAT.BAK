@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int v=4, s, h;
+	clrscr();
+	char c='A';
+
+	for(s=0;s<v;s++){
+		for(h=0;h<=s;h++){
+			cout<<c;
+			c++;
+		}
+		cout<<endl;
+	}
+	getch();
+}
