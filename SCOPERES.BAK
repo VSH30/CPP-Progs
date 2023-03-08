@@ -1,0 +1,11 @@
+#include<iostream.h>
+#include<conio.h>
+int v;
+
+void main(){
+	int v=5;
+	::v=10;
+	clrscr();
+	cout<<"Local Var = "<<v<<endl<<"Global Var = "<<::v;
+	getch();
+}

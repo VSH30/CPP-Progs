@@ -1,0 +1,11 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main(){
+	int x;
+	clrscr();
+	cout<<"Enter a number : ";
+	cin>>x;
+	cout(x%2==0)?<<"Even":<<"Odd";
+	getch();
+}

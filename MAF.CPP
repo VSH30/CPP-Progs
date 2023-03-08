@@ -1,0 +1,12 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main(){
+	int *ptr;
+	clrscr();
+	ptr = new int;
+	*ptr = 33;
+	cout<<"Value of ptr = "<<*ptr;
+	delete ptr;
+	getch();
+}
