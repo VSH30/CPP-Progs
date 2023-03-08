@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+#include<string.h>
+#include<stdio.h>
+
+void main(){
+	clrscr();
+	char title[50], publisher[50];
+	int price, stock;
+	char *author;
+	author = new char[50];
+
+	cout<<"Enter author : ";
+	gets(author);
+	cout<<author;
+	getch();
+}

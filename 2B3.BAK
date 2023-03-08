@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+float pi=3.14;
+
+inline area(int r=5){
+	return(::pi*r*r);
+}
+inline circumference(int r=5){
+	return(2*::pi*r);
+}
+
+void main(){
+	int r;
+	clrscr();
+	cout<<"Enter Radius : ";
+	cin>>r;
+	cout<<"Area = "<<area(r)<<endl;
+	cout<<"Circumference(Default r=5) = "<<circumference();
+	getch();
+}
