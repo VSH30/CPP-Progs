@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<conio.h>
+
+void swapref(int &a, int &b){
+	int c=a;
+	a=b;
+	b=c;
+}
+void swapval(int a, int b){
+	int c=a;
+	a=b;
+	b=c;
+}
+void swaprefptr(int *a, int *b){
+	int c=*a;
+	*a=*b;
+	*b=c;
+}
+int &swapretref(int &a){
+	a=5;
+	return a;
+}
+
+void main(){
+	int x=1,y=99;
+	clrscr();
+	cout<<"Call by val: "<<endl;
+	cout<<x<<ends<<y<<endl;
+	swapval(x,y);
+	cout<<x<<ends<<y<<endl;
+	cout<<"Call by ref: "<<endl;
+	cout<<x<<ends<<y<<endl;
+	swapref(x,y);
+	cout<<x<<ends<<y<<endl;
+	cout<<"Call by ref using ptr: "<<endl;
+	cout<<x<<ends<<y<<endl;
+	swaprefptr(&x,&y);
+	cout<<x<<ends<<y<<endl;
+	cout<<"Ret by ref: "<<endl;
+	cout<<x<<endl;
+	swapretref(x);
+	cout<<x<<endl;
+	getch();
+}
