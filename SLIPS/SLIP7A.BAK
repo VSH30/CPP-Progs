@@ -1,0 +1,37 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+class Strrr{
+	private:
+		char str[50];
+	       //string str;
+	public:
+		Strrr(){
+			cout<<"Enter a string : ";
+			gets(str);
+		}
+		void display(){
+			cout<<endl<<"Current String: "<<str<<endl;
+		}
+		void replace(char ch1,char ch2);
+};
+void Strrr::replace(char ch1, char ch2='x'){
+	int i;
+	for(i=0;i<sizeof(str);i++){
+		if(str[i]==ch1)
+			str[i]=ch2;
+	}
+}
+
+void main(){
+	clrscr();
+	char c;
+	Strrr s;
+	s.display();
+	cout<<endl<<"Enter char to replace: ";
+	cin>>c;
+	s.replace(c);
+	s.display();
+	getch();
+}
