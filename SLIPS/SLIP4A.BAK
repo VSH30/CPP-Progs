@@ -1,26 +1,30 @@
 #include<iostream.h>
 #include<conio.h>
+//#include<string.h>
 
 class Worker{
 	private:
-		char name[25];
+		char name[50];
 		int nohrs, payrate, salary;
 	public:
 		Worker(){
 			cout<<"Enter Worker Name: "; cin>>name;
 			cout<<"Hours Worked(Number): "; cin>>nohrs;
-			cout<<"Pay Rate: "; cin>>payrate;
+		      //	cout<<"Pay Rate: "; cin>>payrate;
+		       //	payrate=100;
 		}
 
-		void tsal(){
+		void tsal(int x=100){
+			payrate=x;
 			cout<<"Salary of Worker "<<name<<" is "<<(nohrs*payrate);
+			cout<<endl<<"Total hours worked= "<<nohrs;
+			cout<<endl<<"Payrate = "<<payrate;
 		}
-}
+};
 
-int main(){
+void main(){
 	clrscr();
 	Worker vsh;
 	vsh.tsal();
-	return 0;
 	getch();
 }

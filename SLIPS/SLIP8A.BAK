@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+
+class Number{
+	private:
+		static int cnt;
+	public:
+		void display(){
+			cnt++;
+			cout<<endl<<"Display has been called "<<cnt<<" times";
+		}
+};
+
+int Number::cnt=0;
+
+void main(){
+	Number a;
+	Number b;
+	clrscr();
+	a.display();
+	a.display();
+	b.display();
+	getch();
+}
