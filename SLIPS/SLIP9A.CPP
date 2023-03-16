@@ -14,11 +14,11 @@ class Person{
 			cout<<"Enter Salary: "; cin>>Salary;
 
 			if(Salary<=20000)
-				tax_amount = Salary*0;
+				tax_amount = Salary*(0/100);
 			else if(20000<Salary & Salary<=40000)
-				tax_amount = Salary*(0.05);
+				tax_amount = Salary*(5/100);
 			else if(Salary>40000)
-				tax_amount = Salary*(0.1);
+				tax_amount = Salary*(10/100);
 		}
 
 		void getdata(){
