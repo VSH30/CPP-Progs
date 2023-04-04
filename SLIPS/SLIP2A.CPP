@@ -4,9 +4,11 @@ using function overlaoding*/
 cone pi r^2 h/3
 sph 4/3 pi r^3*/
 
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
 #define pi 3.14
+
+using namespace std;
 //cyl
 float vol(int r, int h){
 	return(pi*r*r*h);
@@ -20,9 +22,9 @@ float cv(int r, int h){
 	return(r*r*(h/3));
 }
 
-void main(){
+int main(){
 	int rad, ht, ch;
-	clrscr();
+	//clrscr();
 	while(1){
 		cout<<endl<<"----MENU----"<<endl;
 		cout<<"1.Cylinder"<<endl;
@@ -48,12 +50,14 @@ void main(){
 				cout<<"Volume of Sphere = "<<vol(rad)<<endl;
 				break;
 			case 0:
-				return;
+				return 0;
+				break;
 			default:
 				cout<<"INVALID!!!"<<endl;
 				break;
 		}
 	}
 	//getch();
+	return 0;
 }
 

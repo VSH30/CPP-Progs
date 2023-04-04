@@ -1,6 +1,7 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
-//#include<string.h>
+#include<string.h>
+using namespace std;
 
 class Worker{
 	private:
@@ -8,23 +9,23 @@ class Worker{
 		int nohrs, payrate, salary;
 	public:
 		Worker(){
-			cout<<"Enter Worker Name: "; cin>>name;
+			cout<<"Enter Worker Name: "; gets(name);
 			cout<<"Hours Worked(Number): "; cin>>nohrs;
-		      //	cout<<"Pay Rate: "; cin>>payrate;
-		      //	payrate=100;
+		    payrate=100;
+			salary = nohrs*payrate;
 		}
 
 		void tsal(int x=100){
 			payrate=x;
-			cout<<"Salary of Worker "<<name<<" is "<<(nohrs*payrate);
+			cout<<"Salary of Worker "<<name<<" is "<<salary;
 			cout<<endl<<"Total hours worked= "<<nohrs;
 			cout<<endl<<"Payrate = "<<payrate;
 		}
 };
 
-void main(){
-	clrscr();
+main(){
+	//clrscr();
 	Worker vsh;
 	vsh.tsal();
-	getch();
+	return 0;
 }

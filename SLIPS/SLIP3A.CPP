@@ -1,5 +1,7 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
+
+using namespace std;
 
 void swap(int &a, int &b){
 	int c = a;
@@ -7,9 +9,9 @@ void swap(int &a, int &b){
 	b = c;
 }
 
-void main(){
+int main(){
 	int x, y;
-	clrscr();
+	//clrscr();
 	cout<<"Enter first number: ";
 	cin>>x;
 	cout<<"Ener second number: ";
@@ -17,5 +19,5 @@ void main(){
 	cout<<"Numbers are "<<x<<" and "<<y<<endl;
 	swap(x,y);
 	cout<<"Numbers after swapping are "<<x<<" and "<<y<<endl;
-	getch();
+	return 0;
 }

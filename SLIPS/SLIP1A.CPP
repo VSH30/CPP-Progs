@@ -1,12 +1,13 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
+
+using namespace std;
 
 inline int max(int a, int b){
 	return(a>b)?a:b;
 }
-
-void main(){
-	clrscr();
+int main(){
+	//clrscr();
 	int x, y;
 	cout<<"Enter x : ";
 	cin>>x;
@@ -18,4 +19,5 @@ void main(){
 
 	cout<<" is min"<<endl<<z<<" is max";
 	getch();
+	return 0;
 }
