@@ -1,5 +1,7 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
+
+using namespace std;
 
 class Point{
 	private:
@@ -18,9 +20,9 @@ void Point::showpoint(){
 	cout<<"Co-ordinate of point = ("<<x<<","<<y<<")";
 }
 
-void main(){
+int main(){
 	int v, s;
-	clrscr();
+
 	cout<<"Enter x co-ordinate: ";
 	cin>>v;
 	cout<<"Enter y co-ordinate: ";
@@ -29,5 +31,5 @@ void main(){
 	Point P;
 	P.setpoint(v,s);
 	P.showpoint();
-	getch();
+	return 0;
 }

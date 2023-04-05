@@ -58,6 +58,6 @@ int main(){
 	Rectangle r;
 
 	compare(s,r);
-	getch();
+
 	return 0;
 }

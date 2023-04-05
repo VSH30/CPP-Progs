@@ -1,7 +1,9 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
-#include<iomanip.h>
+#include<iomanip>
 #include<math.h>
+
+using namespace std;
 #define pi 3.14
 
 class Shape{
@@ -19,7 +21,7 @@ class Circle:Shape{
 		}
 		void area(){
 			cout<<"Area of Circle = ";
-			cout<<setprecision(2)<<(pi*radius*radius)<<endl;
+			cout<<setprecision(5)<<(pi*pow(radius,2))<<endl;
 		}
 };
 
@@ -33,7 +35,7 @@ class Sphere:Shape{
 		}
 		void area(){
 			cout<<"Area of Sphere = ";
-			cout<<setprecision(2)<<(4*pi*(pow(radius,2)))<<endl;
+			cout<<setprecision(5)<<(4*pi*(pow(radius,2)))<<endl;
 		}
 };
 
@@ -49,12 +51,11 @@ class Cylinder:Shape{
 		}
 		void area(){
 			cout<<"Area of Cylinder = ";
-			cout<<setprecision(2)<<(2*pi*radius*(radius+height))<<endl;
+			cout<<setprecision(5)<<(2*pi*radius*(radius+height))<<endl;
 		}
 };
 
-void main(){
-	clrscr();
+int main(){
 
 	Circle v;
 	Sphere s;
@@ -64,5 +65,5 @@ void main(){
 	s.area();
 	h.area();
 
-	getch();
+	return 0;
 }

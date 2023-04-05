@@ -11,7 +11,7 @@ void swap(int &a, int &b){
 
 int main(){
 	int x, y;
-	//clrscr();
+
 	cout<<"Enter first number: ";
 	cin>>x;
 	cout<<"Ener second number: ";

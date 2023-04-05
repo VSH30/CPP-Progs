@@ -24,7 +24,6 @@ float cv(int r, int h){
 
 int main(){
 	int rad, ht, ch;
-	//clrscr();
 	while(1){
 		cout<<endl<<"----MENU----"<<endl;
 		cout<<"1.Cylinder"<<endl;
@@ -57,7 +56,6 @@ int main(){
 				break;
 		}
 	}
-	//getch();
 	return 0;
 }
 

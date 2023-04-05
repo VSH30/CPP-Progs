@@ -1,6 +1,6 @@
 #include<iostream>
 #include<conio.h>
-#include<string.h>
+
 using namespace std;
 
 class Worker{
@@ -11,20 +11,19 @@ class Worker{
 		Worker(){
 			cout<<"Enter Worker Name: "; gets(name);
 			cout<<"Hours Worked(Number): "; cin>>nohrs;
-		    payrate=100;
-			salary = nohrs*payrate;
 		}
 
 		void tsal(int x=100){
 			payrate=x;
-			cout<<"Salary of Worker "<<name<<" is "<<salary;
+			salary = nohrs*payrate;
+			
 			cout<<endl<<"Total hours worked= "<<nohrs;
 			cout<<endl<<"Payrate = "<<payrate;
+			cout<<endl<<"Salary of Worker "<<name<<" is "<<salary;
 		}
 };
 
 main(){
-	//clrscr();
 	Worker vsh;
 	vsh.tsal();
 	return 0;
