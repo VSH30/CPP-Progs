@@ -76,9 +76,6 @@ int main(){
                 a=n/2;
                 b=n-a;
 
-                maxp=prt[0];
-                maxf=flt[0];
-
                 cout<<endl<<"PART-TIME EMPLOYEES : "<<endl;
                 for(i=0;i<a;i++){
                     cout<<endl<<"employee "<<i+1<<": "<<endl;
@@ -94,11 +91,13 @@ int main(){
                     if(maxf.getsal()<flt[i].getsal())
                         maxf=flt[i];
                 }
+                maxp=prt[0];
+                maxf=flt[0];
                 break;
             case 2:
                 cout<<endl<<"PART-TIME EMPLOYEES : "<<endl;
                 for(i=0;i<a;i++){
-                    cout<<endl<<"employee "<<i+1<<": "<<endl;
+                    cout<<endl<<"employee "<<i+1<<": ";
                         prt[i].getdata();
                 }
 
@@ -109,9 +108,15 @@ int main(){
                 }
                 break;
             case 3:
-                cout<<endl<<"Employee with max salary in Part-Time : "<<endl;
+                for(i=0;i<a;i++)
+                    if(maxp.getsal()<prt[i].getsal())
+                        maxp = prt[i];
+                for(i=0;i<b;i++)
+                    if(maxf.getsal()<flt[i].getsal())
+                        maxf=flt[i];
+                cout<<endl<<"Employee with max salary in Part-Time : ";
                 maxp.getdata();
-                cout<<"Employee with max salary in Full-Time : "<<endl;
+                cout<<endl<<"Employee with max salary in Full-Time : ";
                 maxf.getdata();
                 break;
             case 4:

@@ -1,6 +1,9 @@
 //city code city name pop
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
+
+using namespace std;
+
 char v[30];
 
 class City{
@@ -36,9 +39,8 @@ void asc(City &x, City &y){
 	}
 }
 
-void main(){
+int main(){
 	int n=0,i, c;
-	clrscr();
 	cout<<endl<<"Enter number of City: ";
 	cin>>n;
 	City arr[30];
@@ -56,5 +58,5 @@ void main(){
 	for(i=0;i<n;i++){
 		arr[i].check();
 	}
-	getch();
+	return 0;
 }

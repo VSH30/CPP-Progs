@@ -1,5 +1,7 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
+
+using namespace std;
 
 class Number{
 	private:
@@ -13,14 +15,14 @@ class Number{
 
 int Number::cnt=0;
 
-void main(){
+int main(){
 	Number a;
 	Number b;
-	clrscr();
+
 	a.display();
 	a.display();
 	b.display();
 	a.display();
 	b.display();
-	getch();
+	return 0;
 }
