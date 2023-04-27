@@ -1,0 +1,78 @@
+#include<iostream>
+#include<fstream>
+#include<string.h>
+#include<ctype.h>
+
+using namespace std;
+
+int main(){
+    ifstream sample("SampleData.txt");
+
+    char word[50];
+
+    ofstream Upper("Upper.txt");
+    ofstream Lower("Lower.txt");
+    ofstream Digit("Digit.txt");
+    ofstream Other("Other.txt");
+
+    while(!sample.eof()){
+        sample>>word;
+        for(int i=0;i<strlen(word);i++){
+            if(isalpha(word[i])){
+                if(isupper(word[i]))
+                    Upper<<word[i]<<" ";
+                else if(islower(word[i]))
+                    Lower<<word[i]<<" ";
+            }else{
+                if(isdigit(word[i]))
+                    Digit<<word[i]<<" ";
+                else
+                    Other<<word[i]<<" ";
+            }
+        }
+        //cout<<"--------------"<<endl;
+    }
+
+    //Dislay SampleData.txt
+    cout<<"----------MAIN-------------"<<endl;
+    sample.seekg(0,ios::beg);
+    string s;
+    while(!sample.eof()){
+        getline(sample,s);
+        cout<<s<<endl;
+    }
+    //Closing all files
+    sample.close();
+    Upper.close();
+    Lower.close();
+    Digit.close();
+    Other.close();
+    //Reading all files
+    ifstream u("Upper.txt");
+    ifstream l("Lower.txt");
+    ifstream d("Digit.txt");
+    ifstream o("Other.txt");
+
+    cout<<"----------UPPER-------------"<<endl;
+    while(!u.eof()){
+        getline(u,s);
+        cout<<s<<endl;
+    }
+    cout<<"----------LOWER-------------"<<endl;
+    while(!l.eof()){
+        getline(l,s);
+        cout<<s<<endl;
+    }
+    cout<<"----------DIGIT-------------"<<endl;
+    while(!d.eof()){
+        getline(d,s);
+        cout<<s<<endl;
+    }
+    cout<<"----------OTHER-------------"<<endl;
+    while(!o.eof()){
+        getline(o,s);
+        cout<<s<<endl;
+    }
+    cout<<"----------------------------"<<endl; 
+    return 0;
+}
