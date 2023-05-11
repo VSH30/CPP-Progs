@@ -31,7 +31,8 @@ int main(){
     cout<<"Enter Number of Movies : "; cin>>n;
     Movie arr[10];
 
-    fstream f("Movie.txt",ios::in | ios::out);
+    fstream f;
+    f.open("Movie.txt",ios::in | ios::out);
 
     for(int i=0;i<n;i++){
         cout<<"-----------MOVIE DATA----------"<<endl;

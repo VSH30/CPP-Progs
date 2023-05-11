@@ -11,7 +11,7 @@ int main(void) {
     struct dirent *en;
     jump:
     int prog;
-    char path[500];
+    char path[200];
     system("CLS");
     cout<<"Select a Programming Language : ";
     cout<<endl<<"1. Adv PHP"<<endl<<"2. CPP"<<endl<<"3. Data Structure"<<endl<<"4. JAVA"<<endl<<"5. R Programming"<<endl<<"6. jQuery"<<endl<<"7. PHP"<<endl<<"0. Exit"<<endl<<endl<<"Enter choice : ";
@@ -46,9 +46,10 @@ int main(void) {
 
     if (dr) {
         do{
-            cout<<endl<<"PATH = "<<path<<endl;
             dr = opendir(path);
             system("CLS");
+            cout<<endl<<"PATH = "<<path<<endl;
+            cout<<endl<<"PATH = "<<z<<endl;
             cout<<endl<<"-----------------------MENU-----------------------"<<endl;
             while((en = readdir(dr)) != NULL) {
                 strcpy(t,en->d_name);
@@ -83,10 +84,20 @@ int main(void) {
                     if(op==0)
                         goto jump;
                 }else{
+                    if(op==1){
+                        z = (string)path;
+                        z = z.substr(0,(z.find_last_of('/')));
+                        strcpy(path,z.c_str());
+                    }else if(op==0){
+                       //do nothing
+                    }else{
                     strcat(path,"/");
                     strcat(path,f[op]);
+                    }
                 }
                 num=-1;
+                if(strlen(path)<3)
+                    goto jump;
             }else
                 cout<<"INVALID OPTION!!!"<<endl;
         }while(1);
